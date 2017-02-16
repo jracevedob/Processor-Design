@@ -1,7 +1,8 @@
 # Processor-Design
 
 This directory presents the design of a ZDMI Microcontroller Core (ZMC), which is designed to be integrated into a System on Chip (SoC) and 
-it is oriented for calibration applications. The main characteristics of the ZMC are: \\
+it is oriented for calibration applications. The main characteristics of the ZMC are:
+
 1. RISC architecture: most instructions are executed in only one clock cycle. Additionally, it supports 16 and 32-bits instruction formats.
 2. Built-in PRAM: integrated program memory.
 3. Register file with segmentation of up to 128 data words.
