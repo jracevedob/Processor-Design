@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "test_ALU_reg.sdf.compiled",
+
+SCOPE = tb_test_ALU_reg:test_ALU_reg_i,
+
+LOG_FILE = "logfiles/sdf.log";
