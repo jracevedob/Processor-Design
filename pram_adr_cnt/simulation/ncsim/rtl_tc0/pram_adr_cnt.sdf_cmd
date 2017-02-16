@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "pram_adr_cnt.sdf.compiled",
+
+SCOPE = tb_pram_adr_cnt:pram_adr_cnt_i,
+
+LOG_FILE = "logfiles/sdf.log";
