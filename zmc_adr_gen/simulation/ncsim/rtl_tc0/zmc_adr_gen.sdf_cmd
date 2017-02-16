@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "zmc_adr_gen.sdf.compiled",
+
+SCOPE = tb_zmc_adr_gen:zmc_adr_gen_i,
+
+LOG_FILE = "logfiles/sdf.log";

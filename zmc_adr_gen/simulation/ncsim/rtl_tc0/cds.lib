@@ -1,0 +1,10 @@
+--
+-- Include global cds.lib
+--
+INCLUDE $ICPRO_DIR/env/cds/cds.lib
+--
+-- Undefine global worklib
+UNDEFINE worklib
+-- Define local worklib (testcase specific)
+DEFINE worklib ./worklib
+
