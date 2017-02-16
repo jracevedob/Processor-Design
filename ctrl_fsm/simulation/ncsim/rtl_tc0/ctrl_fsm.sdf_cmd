@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "ctrl_fsm.sdf.compiled",
+
+SCOPE = tb_ctrl_fsm:ctrl_fsm_i,
+
+LOG_FILE = "logfiles/sdf.log";
