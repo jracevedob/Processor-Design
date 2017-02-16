@@ -1,0 +1,4 @@
+DEFINE LIB_MAP(./ => worklib)
+DEFINE VIEW_MAP (.v => functional, \
+                 .vams => verilogams)
+DEFINE WORK worklib

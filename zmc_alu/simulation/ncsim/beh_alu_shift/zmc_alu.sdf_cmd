@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "zmc_alu.sdf.compiled",
+
+SCOPE = tb_zmc_alu:zmc_alu_i,
+
+LOG_FILE = "logfiles/sdf.log";
