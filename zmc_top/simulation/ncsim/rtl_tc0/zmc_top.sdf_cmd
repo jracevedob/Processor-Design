@@ -1,0 +1,5 @@
+COMPILED_SDF_FILE = "zmc_top.sdf.compiled",
+
+SCOPE = tb_zmc_top:zmc_top_i,
+
+LOG_FILE = "logfiles/sdf.log";

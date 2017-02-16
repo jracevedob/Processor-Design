@@ -1,0 +1,261 @@
+# SimVision Command Script (Mon Jul 25 02:44:46 CEST 2016)
+#
+# Version 06.11.s002
+#
+# You can restore this configuration with:
+#
+#     ncsim -gui -input ./scripts/runGUI.tcl -logfile ./logfiles/ncsim.log -covoverwrite -licqueue tb_zmc_top -input restore.tcl
+#
+
+
+#
+# preferences
+#
+preferences set toolbar-txe_waveform_toggle-WaveWindow {
+  usual
+  position -pos 1
+}
+
+#
+# Simulator
+#
+
+database require simulator -hints {
+	simulator "ncsim -gui -input ./scripts/runGUI.tcl -logfile ./logfiles/ncsim.log -covoverwrite -licqueue tb_zmc_top -input restore.tcl"
+}
+
+#
+# groups
+#
+catch {group new -name {Group 1} -overlay 0}
+catch {group new -name {Group 2} -overlay 0}
+catch {group new -name {Group 3} -overlay 0}
+catch {group new -name {Group 4} -overlay 0}
+
+group using {Group 1}
+group set -overlay 0
+group set -comment {}
+group set -parents {}
+group set -groups {}
+group clear 0 end
+
+group insert \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.a_reset_l \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_o[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_o[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_reg[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_ld_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_pc_o[11:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_op_o[7:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_valid_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.clk_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.current_state[5:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_b_bus_i[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_wb_bus_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.inc_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_h_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.mask_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_a_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_b_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_stack_pnt[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_state[5:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.nxt_adr_pc_o[11:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.opcode[7:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.out_data_pram_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.ovr_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.read_data_wb_bus_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.regfile_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_o[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sp_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.stack_pnt[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sync_h_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.valid_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_ack_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_start_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_we_o
+
+group using {Group 2}
+group set -overlay 0
+group set -comment {}
+group set -parents {}
+group set -groups {}
+group clear 0 end
+
+group insert \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.a_reset_l \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_o[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_o[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_reg[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_ld_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_pc_o[11:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_op_o[7:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_valid_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.clk_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.current_state[5:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_b_bus_i[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_wb_bus_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.inc_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_h_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_rqst_reg \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.mask_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_a_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_b_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_stack_pnt[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_state[5:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.nxt_adr_pc_o[11:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.nxt_intr_rqst_reg \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.opcode[7:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.out_data_pram_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.ovr_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.read_data_wb_bus_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.regfile_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_o[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sp_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.stack_pnt[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sync_h_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.valid_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_ack_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_start_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_we_o
+
+group using {Group 3}
+group set -overlay 0
+group set -comment {}
+group set -parents {}
+group set -groups {}
+group clear 0 end
+
+
+group using {Group 4}
+group set -overlay 0
+group set -comment {}
+group set -parents {}
+group set -groups {}
+group clear 0 end
+
+group insert \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_we_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_start_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.wb_ack_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.valid_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sync_h_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.stack_pnt[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.sp_mux_o[1:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.seg_reg_o[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.regfile_we_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.read_data_wb_bus_i[15:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.ovr_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.out_data_pram_i[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.opcode[7:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.nxt_intr_rqst_reg \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.nxt_adr_pc_o[11:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_state[5:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_stack_pnt[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_b_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.next_adr_a_reg[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.mask_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_rqst_reg \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_h_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.intr_ack_h \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_o \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.init_mode_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.inc_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_wb_bus_i[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.data_b_bus_i[15:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.current_state[5:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.clk_i \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_valid_i \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_op_o[7:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.alu_mux_o[1:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_pc_o[11:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_ld_o \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_b_o[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_reg[3:0]} \
+    {tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.adr_a_o[3:0]} \
+    tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i.a_reset_l
+
+#
+# cursors
+#
+set time 124601100ps
+if {[catch {cursor new -name  TimeA -time $time}] != ""} {
+    cursor set -using TimeA -time $time
+}
+
+#
+# mmaps
+#
+mmap new -reuse -name {Boolean as Logic} -contents {
+{%c=FALSE -edgepriority 1 -shape low}
+{%c=TRUE -edgepriority 1 -shape high}
+}
+mmap new -reuse -name {Example Map} -contents {
+{%b=11???? -bgcolor orange -label REG:%x -linecolor yellow -shape bus}
+{%x=1F -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=2C -bgcolor red -label ERROR -linecolor white -shape EVENT}
+{%x=* -label %x -linecolor gray -shape bus}
+}
+
+#
+# Design Browser windows
+#
+if {[catch {window new WatchList -name "Design Browser 1" -geometry 1280x709+31+60}] != ""} {
+    window geometry "Design Browser 1" 1280x709+31+60
+}
+window target "Design Browser 1" on
+browser using {Design Browser 1}
+browser set \
+    -scope tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i
+browser yview see tb_zmc_top.zmc_top_i.zmc_ctrl_i.ctrl_fsm_i
+browser timecontrol set -lock 0
+
+#
+# Waveform windows
+#
+if {[catch {window new WaveWindow -name "Waveform 4" -geometry 1280x713+0+27}] != ""} {
+    window geometry "Waveform 4" 1280x713+0+27
+}
+window target "Waveform 4" on
+waveform using {Waveform 4}
+waveform sidebar visibility partial
+waveform set \
+    -primarycursor TimeA \
+    -signalnames name \
+    -signalwidth 175 \
+    -units ps \
+    -valuewidth 75
+cursor set -using TimeA -time 124,601,100ps
+waveform baseline set -time 0
+
+set id [waveform add -signals [list tb_zmc_top.CLKPERIODE \
+	tb_zmc_top.a_reset_l \
+	tb_zmc_top.clk \
+	tb_zmc_top.intr_ack_h \
+	tb_zmc_top.intr_h \
+	tb_zmc_top.sync_h \
+	tb_zmc_top.wb_ack_i \
+	{tb_zmc_top.wb_adr_o[15:0]} \
+	tb_zmc_top.wb_cyc_o \
+	{tb_zmc_top.wb_dat_i[15:0]} \
+	{tb_zmc_top.wb_dat_o[15:0]} \
+	tb_zmc_top.wb_stb_o \
+	tb_zmc_top.wb_we_o ]]
+set groupId [waveform add -groups {{Group 4}}]
+
+
+waveform xview limits 0 2000ps
