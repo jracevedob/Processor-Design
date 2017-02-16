@@ -1,5 +1,5 @@
 // Company           :   tud                      
-// Author            :   mast14            
+// Author            :   jaac14            
 // E-Mail            :   <email>                    
 //                    			
 // Filename          :   wb_interface.v                
@@ -9,7 +9,7 @@
 //
 // Create Date       :   Fri Apr 17 10:35:21 2015 
 // Last Change       :   $Date: 2015-09-10 18:50:08 +0200 (Thu, 10 Sep 2015) $
-// by                :   $Author: mast14 $                  			
+// by                :   $Author: jaac14 $                  			
 //------------------------------------------------------------
 `timescale 1ns/100ps
 module wb_interface (
