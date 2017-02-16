@@ -1,5 +1,5 @@
 // Company           :   tud                      
-// Author            :   mast14            
+// Author            :   jaac14            
 // E-Mail            :   <email>                    
 //                    			
 // Filename          :   zmc_alu.v                
@@ -9,7 +9,7 @@
 //
 // Create Date       :   Mon Sep 22 08:10:44 2014 
 // Last Change       :   $Date: 2015-09-10 19:00:53 +0200 (Thu, 10 Sep 2015) $
-// by                :   $Author: mast14 $                  			
+// by                :   $Author: jaac14 $                  			
 //------------------------------------------------------------
 `timescale 1ns/10ps
 module zmc_alu (
