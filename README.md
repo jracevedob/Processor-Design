@@ -1,3 +1,8 @@
+In this repository, it is presented the whole design of  RISC processor. Therefore, the design of every functional block (arithmetic and control units among others) is written in Verilog and the verfication of every single block is provided. Although this project has an intermediate to advanced complexity, the main goal of making this repository public is to attract hardware designers to work on project that really matter, instead of spending time and computing resources in merely simulations divorced from reality.
+
+We are periodically documenting every file in order to provide a better understanding about the functionality of each block. In case some questions arise during the exploration of the source code, please do no hesitate to contact us.
+
+
 # Processor-Design
 
 This directory presents the design of a ZDMI Microcontroller Core (ZMC), which is designed to be integrated into a System on Chip (SoC) and 
